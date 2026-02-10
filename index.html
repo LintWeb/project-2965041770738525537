@@ -7,7 +7,7 @@
     <title>Dastarkhwan | Authentic Afghan Restaurant</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary: #6B1D1D; /* Deep Maroon */
@@ -17,6 +17,9 @@
             --text-light: #666666;
             --white: #ffffff;
             --transition: all 0.3s ease;
+            --font-heading: 'Marcellus', serif;
+            --font-body: 'Montserrat', sans-serif;
+            --font-accent: 'Playfair Display', serif;
         }
 
         * {
@@ -26,16 +29,25 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: var(--font-body);
             line-height: 1.6;
             color: var(--text-dark);
             background-color: var(--secondary);
             overflow-x: hidden;
+            letter-spacing: 0.3px;
         }
 
         h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
+            font-family: var(--font-heading);
+            font-weight: 400; /* Marcellus looks best at regular weight */
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        h4 {
+            font-family: var(--font-heading);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         img {
@@ -122,7 +134,8 @@
         .hero h1 {
             font-size: clamp(2.5rem, 8vw, 4.5rem);
             margin-bottom: 10px;
-            letter-spacing: 2px;
+            letter-spacing: 5px;
+            font-family: var(--font-heading);
         }
 
         .hero p {
@@ -130,6 +143,9 @@
             margin-bottom: 30px;
             font-weight: 300;
             font-style: italic;
+            font-family: var(--font-accent);
+            text-transform: none;
+            letter-spacing: 1px;
         }
 
         .btn {
