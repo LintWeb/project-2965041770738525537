@@ -3,9 +3,362 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>project-2965041770738525537</title>
+    <meta name="description" content="Dastarkhwan - Authentic Afghan Restaurant in Chattogram, Bangladesh. Experience the rich flavors of Afghanistan.">
+    <title>Dastarkhwan | Authentic Afghan Restaurant</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6B1D1D; /* Deep Maroon */
+            --secondary: #FDFBF7; /* Cream */
+            --accent: #D4AF37; /* Gold */
+            --text-dark: #1F1F1F;
+            --text-light: #666666;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--secondary);
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Navbar */
+        nav {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            max-height: 60px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 80vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            filter: brightness(0.5);
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: clamp(1rem, 4vw, 1.25rem);
+            margin-bottom: 30px;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 35px;
+            background-color: var(--accent);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            border: 2px solid var(--accent);
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: var(--accent);
+        }
+
+        /* About Section */
+        .about {
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .section-header {
+            max-width: 600px;
+            margin: 0 auto 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        .section-header .divider {
+            height: 3px;
+            width: 60px;
+            background: var(--accent);
+            margin: 0 auto 20px;
+        }
+
+        /* Features/Info */
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .info-card {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            transition: var(--transition);
+        }
+
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        }
+
+        .info-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .price-range {
+            font-size: 1.2rem;
+            color: var(--accent);
+            font-weight: 600;
+            margin-top: 10px;
+        }
+
+        /* Contact Section */
+        .contact {
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 80px 0;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 50px;
+        }
+
+        .contact-info h2 {
+            font-size: 2rem;
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+        }
+
+        .contact-item h4 {
+            font-weight: 600;
+            color: var(--accent);
+            margin-bottom: 5px;
+        }
+
+        /* Footer */
+        footer {
+            background: #111;
+            color: #888;
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid #222;
+        }
+
+        .footer-logo img {
+            max-height: 40px;
+            margin: 0 auto 20px;
+            opacity: 0.8;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* In a real app, implement a hamburger menu */
+            }
+            .hero {
+                height: 60vh;
+            }
+            .about {
+                padding: 60px 0;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Blank white page -->
+
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <a href="#"><img src="images/uploaded-1.jpg" alt="Dastarkhwan logo"></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <img src="images/uploaded-2.jpg" alt="Dastarkhwan Afghan cuisine ambiance" class="hero-img">
+        <div class="hero-content">
+            <h1>Dastarkhwan</h1>
+            <p>Traditional Afghan Hospitality & Flavors</p>
+            <a href="#menu" class="btn">Explore Menu</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Story</h2>
+                <div class="divider"></div>
+                <p>Welcome to Dastarkhwan, where the rich culinary traditions of Afghanistan come alive in the heart of Chattogram. We invite you to experience authentic Afghan hospitality and meticulously prepared dishes that have been passed down through generations.</p>
+            </div>
+
+            <div class="info-grid" id="menu">
+                <div class="info-card">
+                    <h3>Authentic Category</h3>
+                    <p>Afghan Restaurant</p>
+                    <p>Specializing in Kabuli Pulao, Mantoo, and various Kebabs prepared with traditional spices.</p>
+                </div>
+                <div class="info-card">
+                    <h3>Affordable Dining</h3>
+                    <p>Perfect for families and gatherings.</p>
+                    <div class="price-range">Price: ৳400 – 600 (approx.)</div>
+                </div>
+                <div class="info-card">
+                    <h3>Operating Hours</h3>
+                    <p>Open Daily</p>
+                    <p>12:30 PM – 11:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Visit Us</h2>
+                    <div class="contact-item">
+                        <h4>Address</h4>
+                        <p>3rd Floor, FOUR FLAVORS,<br>
+                        Mohammed Ali Rd, Chattogram 4000,<br>
+                        Bangladesh</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Phone</h4>
+                        <p>+880 123-456789</p>
+                    </div>
+                    <div class="contact-item">
+                        <h4>Email</h4>
+                        <p>info@dastarkhwan.com</p>
+                    </div>
+                </div>
+                <div class="contact-info">
+                    <h2>Reservations</h2>
+                    <p>For bookings and private events, please reach out to us. We recommend making a reservation for weekend dinners.</p>
+                    <br>
+                    <a href="tel:+880123456789" class="btn" style="border-color: var(--white); color: var(--white);">Call Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-logo">
+                <img src="images/uploaded-1.jpg" alt="Dastarkhwan footer logo">
+            </div>
+            <p>&copy; <span id="currentYear"></span> Dastarkhwan. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>
