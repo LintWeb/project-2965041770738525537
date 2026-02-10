@@ -277,6 +277,38 @@
             display: block;
         }
 
+        /* Gallery Section */
+        .gallery {
+            padding: 100px 0;
+            background: var(--white);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            height: 300px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
         /* Footer */
         footer {
             background: #111;
@@ -316,6 +348,7 @@
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
                 <li><a href="#menu">Menu</a></li>
+                <li><a href="#gallery">Gallery</a></li>
                 <li><a href="#location">Location</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -370,6 +403,30 @@
                     <h3>Operating Hours</h3>
                     <p>Open Daily</p>
                     <p>12 PM – 12 AM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Gallery</h2>
+                <div class="divider"></div>
+                <p>A glimpse into our authentic Afghan ambiance and signature dishes.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/chat-upload-1770739125638-1.jpeg" alt="Dastarkhwan Restaurant Interior Ambiance">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/chat-upload-1770739125642-2.jpeg" alt="Traditional Afghan Kabuli Pulao and Naan">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/chat-upload-1770739125646-3.jpeg" alt="Creamy Shahi Paneer">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/chat-upload-1770739125646-4.jpeg" alt="Delicious Afghan Kebabs">
                 </div>
             </div>
         </div>
