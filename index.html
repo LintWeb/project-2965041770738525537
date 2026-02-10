@@ -209,6 +209,33 @@
             margin-top: 10px;
         }
 
+        /* Menu Items */
+        .menu-list {
+            list-style: none;
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .menu-list li {
+            padding: 8px 0;
+            border-bottom: 1px dotted #ddd;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            color: var(--primary);
+        }
+
+        .menu-list li:last-child {
+            border-bottom: none;
+        }
+
+        .menu-list li::before {
+            content: "•";
+            color: var(--accent);
+            margin-right: 10px;
+        }
+
         /* Contact Section */
         .contact {
             background-color: var(--primary);
@@ -314,14 +341,22 @@
 
             <div class="info-grid" id="menu">
                 <div class="info-card">
-                    <h3>Authentic Category</h3>
-                    <p>Afghan Restaurant</p>
-                    <p>Specializing in Kabuli Pulao, Mantoo, and various Kebabs prepared with traditional spices.</p>
+                    <h3>Signature Dishes</h3>
+                    <ul class="menu-list">
+                        <li>PESHAWARI BEEF</li>
+                        <li>CHICKEN KARAHI</li>
+                        <li>KABULI BEEF</li>
+                        <li>CHICKEN BUTTER MASALA</li>
+                        <li>TAWA LIVER</li>
+                        <li>TAWA BEEF KEEMA</li>
+                        <li>SHAHI PANEER</li>
+                    </ul>
                 </div>
                 <div class="info-card">
                     <h3>Affordable Dining</h3>
                     <p>Perfect for families and gatherings.</p>
                     <div class="price-range">Price: ৳400 – 600 (approx.)</div>
+                    <p style="margin-top: 20px;">Experience premium Afghan cuisine at a reasonable price range.</p>
                 </div>
                 <div class="info-card">
                     <h3>Operating Hours</h3>
