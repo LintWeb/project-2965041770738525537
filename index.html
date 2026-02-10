@@ -78,9 +78,24 @@
             align-items: center;
         }
 
+        .logo a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 12px;
+        }
+
         .logo img {
-            max-height: 60px;
+            max-height: 50px;
             width: auto;
+        }
+
+        .logo-text {
+            font-family: var(--font-heading);
+            font-size: 1.6rem;
+            color: var(--primary);
+            letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         .nav-links {
@@ -389,7 +404,10 @@
     <nav>
         <div class="container">
             <div class="logo">
-                <a href="#"><img src="images/uploaded-1.jpg" alt="Dastarkhwan logo"></a>
+                <a href="#">
+                    <img src="images/uploaded-1.jpg" alt="Dastarkhwan logo">
+                    <span class="logo-text">Dastarkhwan</span>
+                </a>
             </div>
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
